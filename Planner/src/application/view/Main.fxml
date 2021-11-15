@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0">
+               <image>
+                  <Image url="@../../images/download.jfif" />
+               </image>
+            </ImageView>
+            <Text fill="#5b1f03" layoutX="19.0" layoutY="167.0" stroke="#f5ded1" strokeType="OUTSIDE" strokeWidth="6.0" text="WELCOME TO YOUR" textAlignment="CENTER" wrappingWidth="762.8896484375">
+               <font>
+                  <Font name="Work Sans ExtraBold" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="#5b1f03" layoutX="140.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT PLANNER" textAlignment="CENTER">
+               <font>
+                  <Font name="Roboto Slab Thin" size="55.0" />
+               </font>
+            </Text>
+            <Button fx:id="startButton" layoutX="257.0" layoutY="591.0" mnemonicParsing="false" onAction="#handle" prefHeight="115.0" prefWidth="287.0" style="-fx-background-color: #5b1f03; -fx-background-radius: 30;" text="CLICK HERE TO GET STARTED" textAlignment="CENTER" textFill="#f5ded1" wrapText="true">
+               <font>
+                  <Font name="Work Sans ExtraBold" size="23.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="345.0" fitWidth="256.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/images-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="345.0" fitWidth="256.0" layoutX="544.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+               <image>
+                  <Image url="@../../images/images-removebg-preview.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="180.0" z="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <Line endX="-60.0" layoutX="365.0" layoutY="307.0" rotate="55.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="-60.0" layoutX="481.0" layoutY="276.0" rotate="90.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="-60.0" layoutX="589.0" layoutY="307.0" rotate="-55.0" startX="-100.0" stroke="WHITE" strokeWidth="3.0" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
-
