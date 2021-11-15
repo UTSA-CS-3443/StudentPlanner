@@ -12,7 +12,7 @@ public class MainController implements EventHandler<ActionEvent> {
 	@Override
 	public void handle(ActionEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Priority.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
