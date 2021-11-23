@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.CalendarController">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CalendarController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0">
+               <image>
+                  <Image url="@../../images/brown.jfif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="list" fitHeight="77.0" fitWidth="74.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/list-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="priority" fitHeight="65.0" fitWidth="65.0" layoutX="19.0" layoutY="95.0" onMouseClicked="#switchToPriority" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/priority-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="home" fitHeight="77.0" fitWidth="76.0" layoutX="13.0" layoutY="718.0" onMouseClicked="#switchToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/home-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settings" fitHeight="93.0" fitWidth="86.0" layoutX="8.0" layoutY="636.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/settings-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
