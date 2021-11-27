@@ -1,13 +1,30 @@
-Entry,House party,,,
-Field,House party,date,11/26/2021,
-Tag,House party,party,,
-Entry,Get car serviced,,,
-Field,Get car serviced,date,11/30/2021,
-Tag,Get car serviced,chore,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Entry,House party
+Field,House party,date,2021-11-26
+Field,House party,course,CS 3443
+Field,House party,description,We'll all be partying now that this project is over
+Field,House party,type,Get Together
+Tag,House party,party
+Entry,Get car serviced
+Field,Get car serviced,date,2021-11-30
+Tag,Get car serviced,chore
+Entry,Flying Dutchman
+Field,Flying Dutchman,date,2021-12-05
+Tag,Flying Dutchman,spelunking
+Entry,Roses are red
+Field,Roses are red,date,2022-01-01
+Entry,Violets are blue
+Field,Violets are blue,date,2022-01-01
+Entry,Armageddon
+Field,Armageddon,date,2022-01-01
+Entry,Flanders
+Field,Flanders,date,2022-01-01
+Entry,Save 15% on car insurance
+Field,Save 15% on car insurance,date,2022-01-01
+Entry,Red Button
+Field,Red Button,date,2022-01-01
+Entry,Memes
+Field,Memes,date,2022-01-01
+Entry,Never gonna give you up
+Field,Never gonna give you up,date,2022-01-01
+Entry,Jeff who?
+Field,Jeff who?,date,2022-01-01
