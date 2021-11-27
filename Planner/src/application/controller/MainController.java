@@ -1,6 +1,7 @@
 package application.controller;
 
 import application.Main;
+import application.model.Schedule;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +23,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	
 	public void switchToCalendar(MouseEvent event) {
 		try {
+			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
@@ -33,6 +35,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	
 	public void switchToList(MouseEvent event) {
 		try {
+			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
@@ -44,6 +47,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	
 	public void switchToPriority(MouseEvent event) {
 		try {
+			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Priority.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();

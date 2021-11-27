@@ -88,6 +88,7 @@ public class Schedule{
 	}
 
 	public static void loadData() {
+		entries.clear();
 		for (int i = 0; i < scheduleFiles.size(); i++) {
 			if (scheduleFiles.get(i).isActive()) {
 				File file = new File("data/" + scheduleFiles.get(i).getFileName());

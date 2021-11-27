@@ -52,7 +52,7 @@ public class Entry {
 			if (fields.get(i).getName().equals(name))
 				return fields.get(i);
 
-		return null;
+		return new Field(name);
 	}
 
 	public Field removeField(String name) {
