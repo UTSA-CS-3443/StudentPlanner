@@ -6,13 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class PriorityController implements EventHandler<MouseEvent> {
 
 	@Override
 	public void handle(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Settings.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -22,7 +23,7 @@ public class PriorityController implements EventHandler<MouseEvent> {
 	
 	public void switchToCalendar(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Calendar.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -32,7 +33,7 @@ public class PriorityController implements EventHandler<MouseEvent> {
 	
 	public void switchToList(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/List.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -42,7 +43,7 @@ public class PriorityController implements EventHandler<MouseEvent> {
 	
 	public void switchToHome(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Main.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {

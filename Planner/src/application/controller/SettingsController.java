@@ -12,7 +12,7 @@ public class SettingsController implements EventHandler<MouseEvent> {
 	@Override
 	public void handle(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Main.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -23,7 +23,7 @@ public class SettingsController implements EventHandler<MouseEvent> {
 	
 	public void switchToCalendar(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Calendar.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -34,7 +34,7 @@ public class SettingsController implements EventHandler<MouseEvent> {
 	
 	public void switchToList(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/List.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
@@ -45,7 +45,7 @@ public class SettingsController implements EventHandler<MouseEvent> {
 	
 	public void switchToPriority(MouseEvent event) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Priority.fxml"));
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Priority.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 			} catch(Exception e) {
