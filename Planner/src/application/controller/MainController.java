@@ -13,6 +13,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	@Override
 	public void handle(MouseEvent event) {
 		try {
+			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Settings.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();

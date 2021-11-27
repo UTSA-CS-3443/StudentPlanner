@@ -23,7 +23,6 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.ArrayList;
-import java.lang.Math;
 
 public class PriorityController implements EventHandler<MouseEvent>, Initializable {
 	
@@ -32,6 +31,45 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		//order entries by Settings.getPriorityOrdering()
+		ArrayList<Entry> entries = (ArrayList<Entry>) Schedule.getEntries().clone();
+		for (int i = 1; i < entries.size(); i++) {
+			for (int j = 0; j < entries.size() - i; j++) {
+				if (entries.get(j).getField(Settings.getPriorityOrdering()).getValue()
+						.compareTo(entries.get(j + 1).getField(Settings.getPriorityOrdering()).getValue()) > 0) {
+					Entry temp = entries.get(j);
+					entries.set(j, entries.get(j + 1));
+					entries.set(j + 1, temp);
+				}
+			}
+		}
+		//fill in entry fields in view from model (link model to view)
+		mainPane.getChildren().clear();
+		for (int i = 0; i < 1 && i < entries.size(); i++) {
+			mainPane.getChildren().add(largeEntry(0, 30,
+					entries.get(i).getField(Settings.getPriorityTopLeft()).getValue(),
+					entries.get(i).getField(Settings.getPriorityTopRight()).getValue(),
+					entries.get(i).getName(),
+					entries.get(i).getField(Settings.getPriorityCenter()).getValue(),
+					entries.get(i).getField(Settings.getPriorityCenterBottom()).getValue(),
+					entries.get(i).getField(Settings.getPriorityBottomLeft()).getValue(),
+					entries.get(i).getField(Settings.getPriorityBottomRight()).getValue()));
+			
+		}
+		for (int i = 1; i < 5 && i < entries.size(); i++) {
+			mainPane.getChildren().add(mediumEntry(330 + 165 * ((i - 1) % 2), 30 + 135 * ((i - 1) / 2),
+					entries.get(i).getField(Settings.getPriorityTopRight()).getValue(),
+					entries.get(i).getName()));
+			
+		}
+		for (int i = 5; i < 30 && i < entries.size(); i++) {
+			mainPane.getChildren().add(smallEntry(00 + 130 * ((i - 5) % 5), 300 + 98 * ((i - 5) / 5),
+					entries.get(i).getField(Settings.getPriorityTopRight()).getValue(),
+					entries.get(i).getName()));
+		}
+	}
+	
+	public void refresh() {
 		//order entries by Settings.getPriorityOrdering()
 		ArrayList<Entry> entries = (ArrayList<Entry>) Schedule.getEntries().clone();
 		for (int i = 1; i < entries.size(); i++) {
