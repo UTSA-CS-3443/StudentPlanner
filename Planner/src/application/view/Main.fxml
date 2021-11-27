@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="800.0">
          <children>
@@ -28,17 +26,17 @@
                   <Image url="@../../images/images-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="settings" fitHeight="109.0" fitWidth="100.0" layoutX="255.0" layoutY="656.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settings" fitHeight="109.0" fitWidth="100.0" layoutX="90.0" layoutY="656.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/settings-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="calendar" fitHeight="95.0" fitWidth="81.0" layoutX="93.0" layoutY="668.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="calendar" disable="true" fitHeight="95.0" fitWidth="81.0" layoutX="93.0" layoutY="668.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/calendar-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="list" fitHeight="89.0" fitWidth="87.0" layoutX="435.0" layoutY="666.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="list" fitHeight="89.0" fitWidth="87.0" layoutX="435.0" layoutY="666.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/list-removebg-preview.png" />
                </image>
@@ -53,22 +51,22 @@
                   <Font name="Roboto Slab Thin" size="55.0" />
                </font>
             </Text>
-            <Label layoutX="85.0" layoutY="640.0" text="CALENDAR" textFill="#f5ded1">
+            <Label disable="true" layoutX="85.0" layoutY="640.0" text="CALENDAR" textFill="#f5ded1" visible="false">
                <font>
                   <Font name="Work Sans ExtraBold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="260.0" layoutY="640.0" text="SETTINGS" textFill="#f5ded1">
+            <Label layoutX="101.0" layoutY="640.0" text="SETTINGS" textFill="#f5ded1">
                <font>
                   <Font name="Work Sans ExtraBold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="458.0" layoutY="640.0" text="LIST" textFill="#f5ded1">
+            <Label disable="true" layoutX="458.0" layoutY="640.0" text="LIST" textFill="#f5ded1" visible="false">
                <font>
                   <Font name="Work Sans ExtraBold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="624.0" layoutY="640.0" text="PRIORITY" textFill="#f5ded1">
+            <Label layoutX="618.0" layoutY="640.0" text="SCHEDULE" textFill="#f5ded1">
                <font>
                   <Font name="Work Sans ExtraBold" size="18.0" />
                </font>

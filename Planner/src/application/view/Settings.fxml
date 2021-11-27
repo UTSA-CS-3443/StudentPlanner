@@ -21,17 +21,17 @@
                   <Image url="@../../images/home-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="calendar" fitHeight="67.0" fitWidth="65.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="calendar" disable="true" fitHeight="67.0" fitWidth="65.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/calendar-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="list" fitHeight="77.0" fitWidth="74.0" layoutX="8.0" layoutY="85.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="list" disable="true" fitHeight="77.0" fitWidth="74.0" layoutX="8.0" layoutY="85.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/list-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="priority" fitHeight="65.0" fitWidth="65.0" layoutX="13.0" layoutY="165.0" onMouseClicked="#switchToPriority" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="priority" fitHeight="65.0" fitWidth="65.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#switchToPriority" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/priority-removebg-preview.png" />
                </image>
