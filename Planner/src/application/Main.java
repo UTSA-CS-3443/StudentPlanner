@@ -1,5 +1,7 @@
 package application;
 	
+import application.model.Schedule;
+import application.model.Settings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -25,6 +27,9 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		Schedule.initialize();
+		Settings.loadSettings();
+		
 		launch(args);
 	}
 }
