@@ -38,6 +38,24 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <AnchorPane layoutY="200.0" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="entryName1" layoutX="200.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" prefHeight="25.0" text="Entry Name:" textAlignment="RIGHT" textFill="WHITE" />
+            <TextField fx:id="scheduleName2" layoutX="200.0" layoutY="35.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="107.0" layoutY="35.0" prefHeight="25.0" text="Schedule Name:" textAlignment="RIGHT" textFill="WHITE" />
+            <Button layoutX="231.0" layoutY="70.0" mnemonicParsing="false" onAction="#addEntry" text="Add Entry" />
+            <Button layoutX="310.0" layoutY="70.0" mnemonicParsing="false" onAction="#removeEntry" text="Remove Entry" />
+            <TextField fx:id="entryName2" layoutX="200.0" layoutY="130.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="130.0" prefHeight="25.0" text="Entry Name:" textAlignment="RIGHT" textFill="WHITE" />
+            <TextField fx:id="fieldName" layoutX="200.0" layoutY="165.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="129.0" layoutY="165.0" prefHeight="25.0" text="Field Name:" textAlignment="RIGHT" textFill="WHITE" />
+            <TextField fx:id="fieldValue" layoutX="200.0" layoutY="200.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="130.0" layoutY="200.0" prefHeight="25.0" text="Field Value:" textAlignment="RIGHT" textFill="WHITE" />
+            <Button layoutX="310.0" layoutY="235.0" mnemonicParsing="false" onAction="#removeField" text="Remove Field" />
+            <Button layoutX="232.0" layoutY="235.0" mnemonicParsing="false" onAction="#addField" text="Add Field" />
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="480.0" prefHeight="800.0" prefWidth="320.0">
          <children>
             <TextField fx:id="scheduleFile" layoutX="100.0" layoutY="20.0" prefWidth="200.0" />

@@ -2,6 +2,8 @@ package application.controller;
 
 import application.Main;
 import application.model.Schedule;
+import application.model.Entry;
+import application.model.Field;
 import application.model.Settings;
 import application.model.ToggleableFile;
 import javafx.event.EventHandler;
@@ -25,6 +27,21 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	private TextField scheduleName;
 	
 	@FXML
+	private TextField scheduleName2;
+	
+	@FXML
+	private TextField entryName1;
+	
+	@FXML
+	private TextField entryName2;
+	
+	@FXML
+	private TextField fieldName;
+	
+	@FXML
+	private TextField fieldValue;
+	
+	@FXML
 	private Label schedules;
 	
 	@Override
@@ -35,6 +52,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	@Override
 	public void handle(MouseEvent event) {
 		try {
+			Schedule.saveData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Main.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
@@ -46,6 +64,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	
 	public void switchToCalendar(MouseEvent event) {
 		try {
+			Schedule.saveData();
 			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
@@ -58,6 +77,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	
 	public void switchToList(MouseEvent event) {
 		try {
+			Schedule.saveData();
 			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
@@ -70,6 +90,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	
 	public void switchToPriority(MouseEvent event) {
 		try {
+			Schedule.saveData();
 			Schedule.loadData();
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Priority.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
@@ -77,6 +98,37 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 			} catch(Exception e) {
 			e.printStackTrace();
 			}
+		
+	}
+	
+	@FXML
+	public void addEntry() {
+		Entry entry;
+		if (entryName1.getText() != null) {
+			entry = new Entry(entryName1.getText());
+			entry.addTag("Schedule: " + scheduleName2.getText());
+			Schedule.addEntry(entry);
+		}
+	}
+	
+	@FXML
+	public void removeEntry() {
+		if (entryName1.getText() != null)
+			Schedule.removeEntry(entryName1.getText());
+	}
+	
+	@FXML
+	public void addField() {
+		Entry entry = Schedule.getEntry(entryName2.getText());
+		if (entry != null)
+			entry.addField(new Field(fieldName.getText(), fieldValue.getText()));
+	}
+	
+	@FXML
+	public void removeField() {
+		Entry entry = Schedule.getEntry(entryName2.getText());
+		if (entry != null)
+			entry.removeField(fieldName.getText());
 	}
 	
 	@FXML

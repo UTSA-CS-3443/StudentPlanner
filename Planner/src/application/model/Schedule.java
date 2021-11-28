@@ -125,22 +125,25 @@ public class Schedule{
 	}
 
 	public static void saveData() {
-		for (int i = 0; i < entries.size(); i++) {
-			ToggleableFile scheduleFile = getScheduleFile(entries.get(i).getTags().get(0).substring(10));
+		for (int i = 0; i < scheduleFiles.size(); i++) {
 			try {
-				BufferedWriter out = new BufferedWriter(new FileWriter("data/" + scheduleFile.getFileName()));
-				Entry entry = entries.get(i);
-				out.write("Entry," + entry.getName());
-				out.newLine();
-				for (int j = 0; j < entries.get(i).getFields().size(); j++) {
-					Field field = entry.getFields().get(j);
-					out.write("Field," + entry.getName() + "," + field.getName() + "," + field.getValue());
-					out.newLine();
-				}
-				for (int j = 0; j < entries.get(i).getTags().size(); j++) {
-					String tag = entry.getTags().get(j);
-					out.write("Tag," + entry.getName() + "," + tag);
-					out.newLine();
+				BufferedWriter out = new BufferedWriter(new FileWriter("data/" + scheduleFiles.get(i).getFileName()));
+				for (int j = 0; j < entries.size(); j++) {
+					if (entries.get(j).getTags().get(0).substring(10).equals(scheduleFiles.get(i).getAliasName())) {
+						Entry entry = entries.get(j);
+						out.write("Entry," + entry.getName());
+						out.newLine();
+						for (int k = 0; k < entry.getFields().size(); k++) {
+							Field field = entry.getFields().get(k);
+							out.write("Field," + entry.getName() + "," + field.getName() + "," + field.getValue());
+							out.newLine();
+						}
+						for (int k = 1; k < entry.getTags().size(); k++) {
+							String tag = entry.getTags().get(k);
+							out.write("Tag," + entry.getName() + "," + tag);
+							out.newLine();
+						}
+					}
 				}
 				out.close();
 			} catch (Exception e) {
