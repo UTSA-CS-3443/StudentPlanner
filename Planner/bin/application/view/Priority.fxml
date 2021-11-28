@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PriorityController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="800.0">
+               <image>
+                  <Image url="@../../images/brown.jfif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="calendar" disable="true" fitHeight="67.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../images/calendar-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="list" disable="true" fitHeight="77.0" fitWidth="74.0" layoutX="10.0" layoutY="87.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../images/list-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settings" fitHeight="93.0" fitWidth="86.0" layoutX="4.0" layoutY="628.0" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/settings-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="home" fitHeight="77.0" fitWidth="76.0" layoutX="9.0" layoutY="720.0" onMouseClicked="#switchToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/home-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" layoutX="130.0" prefHeight="800.0" prefWidth="670.0" />
+   </children>
+</AnchorPane>
