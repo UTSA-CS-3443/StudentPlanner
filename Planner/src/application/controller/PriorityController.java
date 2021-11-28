@@ -18,13 +18,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.TextAlignment;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.ArrayList;
-import java.lang.Math;
 
 
 public class PriorityController implements EventHandler<MouseEvent>, Initializable {
@@ -167,10 +166,13 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		Rectangle rect = new Rectangle();
 		rect.setWidth(310);
 		rect.setHeight(240);
-		rect.setFill(Paint.valueOf("dddddd"));
+		rect.setFill(Paint.valueOf("f5ded1"));
+		rect.setStrokeWidth(3.0);
+		rect.setStroke(Color.WHITE);
 		temp.getChildren().add(rect);
 
 		Label topLeft = new Label();
+		topLeft.setStyle("-fx-text-fill: #5b1f03");
 		topLeft.setFont(smallFont);
 		topLeft.setText(topLeftText);
 		topLeft.setWrapText(true);
@@ -182,6 +184,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		topLeft.setTextAlignment(TextAlignment.LEFT);
 
 		Label topRight = new Label();
+		topRight.setStyle("-fx-text-fill: #5b1f03");
 		topRight.setFont(smallFont);
 		topRight.setText(topRightText);
 		topRight.setWrapText(true);
@@ -193,6 +196,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		topRight.setTextAlignment(TextAlignment.RIGHT);
 
 		Label centerTop = new Label();
+		centerTop.setStyle("-fx-text-fill: #5b1f03");
 		centerTop.setFont(titleFont);
 		centerTop.setText(centerTopText);
 		centerTop.setWrapText(true);
@@ -204,6 +208,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		centerTop.setTextAlignment(TextAlignment.CENTER);
 
 		Label center = new Label();
+		center.setStyle("-fx-text-fill: #5b1f03");
 		center.setFont(smallFont);
 		center.setText(centerText);
 		center.setWrapText(true);
@@ -215,6 +220,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		center.setTextAlignment(TextAlignment.CENTER);
 
 		Label centerBottom = new Label();
+		centerBottom.setStyle("-fx-text-fill: #5b1f03");
 		centerBottom.setFont(smallFont);
 		centerBottom.setText(centerBottomText);
 		centerBottom.setWrapText(true);
@@ -226,6 +232,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		centerBottom.setTextAlignment(TextAlignment.CENTER);
 
 		Label bottomLeft = new Label();
+		bottomLeft.setStyle("-fx-text-fill: #5b1f03");
 		bottomLeft.setFont(smallFont);
 		bottomLeft.setText(bottomLeftText);
 		bottomLeft.setWrapText(true);
@@ -237,6 +244,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		bottomLeft.setTextAlignment(TextAlignment.LEFT);
 
 		Label bottomRight = new Label();
+		bottomRight.setStyle("-fx-text-fill: #5b1f03");
 		bottomRight.setFont(smallFont);
 		bottomRight.setText(bottomRightText);
 		bottomRight.setWrapText(true);
@@ -272,10 +280,13 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		Rectangle rect = new Rectangle();
 		rect.setWidth(145);
 		rect.setHeight(105);
-		rect.setFill(Paint.valueOf("dddddd"));
+		rect.setFill(Paint.valueOf("f5ded1"));
+		rect.setStrokeWidth(3.0);
+		rect.setStroke(Color.WHITE);
 		temp.getChildren().add(rect);
 
 		Label top = new Label();
+		top.setStyle("-fx-text-fill: #5b1f03");
 		top.setFont(smallFont);
 		top.setText(topText);
 		top.setWrapText(true);
@@ -287,6 +298,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		top.setTextAlignment(TextAlignment.CENTER);
 
 		Label center = new Label();
+		center.setStyle("-fx-text-fill: #5b1f03");
 		center.setFont(titleFont);
 		center.setText(centerText);
 		center.setWrapText(true);
@@ -316,10 +328,13 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		Rectangle rect = new Rectangle();
 		rect.setWidth(120);
 		rect.setHeight(78);
-		rect.setFill(Paint.valueOf("dddddd"));
+		rect.setFill(Paint.valueOf("f5ded1"));
+		rect.setStrokeWidth(3.0);
+		rect.setStroke(Color.WHITE);
 		temp.getChildren().add(rect);
 
 		Label top = new Label();
+		top.setStyle("-fx-text-fill: #5b1f03");
 		top.setFont(smallFont);
 		top.setText(topText);
 		top.setWrapText(true);
@@ -331,6 +346,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		top.setTextAlignment(TextAlignment.CENTER);
 
 		Label center = new Label();
+		center.setStyle("-fx-text-fill: #5b1f03");
 		center.setFont(smallFont);
 		center.setText(centerText);
 		center.setWrapText(true);
