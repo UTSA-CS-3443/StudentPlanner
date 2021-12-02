@@ -1,10 +1,3 @@
-/**
- * This class is the controller for the Settings view. Any changes to what's displayed in the settings 
- * of the app is managed by this view.
- * 
- * @author Stephanie Bassey, Lucian Williams, Azra Al Rabeeah
- */
-
 package application.controller;
 
 import application.Main;
@@ -25,6 +18,12 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The SettingsController class is the controller for the Settings view. Any changes to what's displayed in the settings 
+ * of the app is managed by this view.
+ * 
+ * @author Stephanie Bassey, Lucian Williams, Azra Al Rabeeah
+ */
 public class SettingsController implements EventHandler<MouseEvent>, Initializable {
 	
 	@FXML
@@ -65,7 +64,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	/**
 	 * Method responsible for switching the user back to the main/welcome screen
 	 * 
-	 * @param event (MouseEvent that listens for mouse clicks on the home button)
+	 * @param event (MouseEvent)
 	 */
 	@Override
 	public void handle(MouseEvent event) {
@@ -81,9 +80,9 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	}
 	
 	/**
-	 * Method responsible for switching the user back to the view with the schedule entries
+	 * Method responisble for switching the user back to the view with the schedule entries
 	 * 
-	 * @param event (MouseEvent that listens for mouse clicks on the Priority button)
+	 * @param event
 	 */
 	public void switchToPriority(MouseEvent event) {
 		try {
