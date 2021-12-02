@@ -1,3 +1,10 @@
+/**
+ * This class controls the Priority view. It is responsible for things like showing all of 
+ * the inputed schedule entries, ordering the entries by category, and updating changes made by the user in the settings view.
+ * 
+ * @author Stephanie Bassey, Lucian Williams, Azrah Al Rabeeah
+ */
+
 package application.controller;
 
 import application.Main;
@@ -31,6 +38,13 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	@FXML
 	AnchorPane mainPane;
 	
+	/**
+	 * This method preloads all of the data onto the Priority view te moment the view is launched.
+	 * More specifically, each schedule entry is organized by a priority whether that's date or any other category and then it loads
+	 * each entry with the data entered by the user by using the associated model classes.
+	 * 
+	 * @param location (URL), resources (ResourceBundle)
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		//order entries by Settings.getPriorityOrdering()
@@ -71,6 +85,11 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		}
 	}
 	
+	/**
+	 * This method refreshes the view which esstially means that any time the view is left 
+	 * and came back to, this method is responsible for updating the screen to reflect the change in
+	 * data. Change in data can include adding or deleting information for example.
+	 */
 	public void refresh() {
 		//order entries by Settings.getPriorityOrdering()
 		ArrayList<Entry> entries = (ArrayList<Entry>) Schedule.getEntries().clone();
@@ -110,6 +129,12 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		}
 	}
 
+	
+	/**
+	 * Method responsible for switching the view to the Settings view
+	 * 
+	 * @param event (Mouseevent)
+	 */
 	@Override
 	public void handle(MouseEvent event) {
 		try {
@@ -121,26 +146,11 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 			}
 	}
 	
-	public void switchToCalendar(MouseEvent event) {
-		try {
-			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
-			Main.stage.setScene(new Scene(root, 800, 800));
-			Main.stage.show();
-			} catch(Exception e) {
-			e.printStackTrace();
-			}
-	}
-	
-	public void switchToList(MouseEvent event) {
-		try {
-			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
-			Main.stage.setScene(new Scene(root, 800, 800));
-			Main.stage.show();
-			} catch(Exception e) {
-			e.printStackTrace();
-			}
-	}
-	
+	/**
+	 * Method responsible for switching view back to the home aka "main" view
+	 * 
+	 * @param event (MouseEvent)
+	 */
 	public void switchToHome(MouseEvent event) {
 		try {
 			Parent root = FXMLLoader.load(Main.class.getResource("view/Main.fxml"));
@@ -151,6 +161,22 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 			}
 	}
 
+	/**
+	 * Method responsible for generating a relatively large anchor pane. This anchor pane is 
+	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
+	 * also creates labels and then adds them to different places on the anchor pane.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param topLeftText
+	 * @param topRightText
+	 * @param centerTopText
+	 * @param centerText
+	 * @param centerBottomText
+	 * @param bottomLeftText
+	 * @param bottomRightText
+	 * @return temp (AnchorPane)
+	 */
 	private AnchorPane largeEntry(int x, int y, String topLeftText, String topRightText, String centerTopText,
 			String centerText, String centerBottomText, String bottomLeftText, String bottomRightText) {
 
@@ -266,6 +292,22 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 		return temp;
 	}
 	
+	/**
+	 * Method responsible for generating a medium sized anchor pane. This anchor pane is 
+	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
+	 * also creates labels and then adds them to different positions on the anchor pane.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param topLeftText
+	 * @param topRightText
+	 * @param centerTopText
+	 * @param centerText
+	 * @param centerBottomText
+	 * @param bottomLeftText
+	 * @param bottomRightText
+	 * @return temp (AnchorPane)
+	 */
 	private AnchorPane mediumEntry(int x, int y, String topText, String centerText) {
 
 		Font smallFont = Font.font("System", FontWeight.BOLD, FontPosture.REGULAR, 10.0);
@@ -315,6 +357,23 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 
 		return temp;
 	}
+	
+	/**
+	 * Method responsible for generating a small anchor pane. This anchor pane is 
+	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
+	 * also creates labels and then adds them to different places on the anchor pane.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param topLeftText
+	 * @param topRightText
+	 * @param centerTopText
+	 * @param centerText
+	 * @param centerBottomText
+	 * @param bottomLeftText
+	 * @param bottomRightText
+	 * @return temp (AnchorPane)
+	 */
 	private AnchorPane smallEntry(int x, int y, String topText, String centerText) {
 
 		Font smallFont = Font.font("System", FontWeight.BOLD, FontPosture.REGULAR, 10.0);

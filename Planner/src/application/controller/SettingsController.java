@@ -1,3 +1,10 @@
+/**
+ * This class is the controller for the Settings view. Any changes to what's displayed in the settings 
+ * of the app is managed by this view.
+ * 
+ * @author Stephanie Bassey, Lucian Williams, Azra Al Rabeeah
+ */
+
 package application.controller;
 
 import application.Main;
@@ -44,11 +51,22 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	@FXML
 	private Label schedules;
 	
+	/**
+	 * This method loads the Settings view and any changes by calling on a method from 
+	 * one of the model classes.
+	 * 
+	 * @param location (URL), resources (ResourceBundle)
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		refreshSchedules();
 	}
 
+	/**
+	 * Method responsible for switching the user back to the main/welcome screen
+	 * 
+	 * @param event (MouseEvent)
+	 */
 	@Override
 	public void handle(MouseEvent event) {
 		try {
@@ -62,32 +80,11 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 		
 	}
 	
-	public void switchToCalendar(MouseEvent event) {
-		try {
-			Schedule.saveData();
-			Schedule.loadData();
-			Parent root = FXMLLoader.load(Main.class.getResource("view/Calendar.fxml"));
-			Main.stage.setScene(new Scene(root, 800, 800));
-			Main.stage.show();
-			} catch(Exception e) {
-			e.printStackTrace();
-			}
-	}
-	
-	
-	public void switchToList(MouseEvent event) {
-		try {
-			Schedule.saveData();
-			Schedule.loadData();
-			Parent root = FXMLLoader.load(Main.class.getResource("view/List.fxml"));
-			Main.stage.setScene(new Scene(root, 800, 800));
-			Main.stage.show();
-			} catch(Exception e) {
-			e.printStackTrace();
-			}
-	}
-	
-	
+	/**
+	 * Method responisble for switching the user back to the view with the schedule entries
+	 * 
+	 * @param event
+	 */
 	public void switchToPriority(MouseEvent event) {
 		try {
 			Schedule.saveData();
@@ -101,6 +98,9 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 		
 	}
 	
+	/**
+	 * This method adds an entry to the schedule file basedd on the user's input
+	 */
 	@FXML
 	public void addEntry() {
 		Entry entry;
@@ -111,12 +111,19 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 		}
 	}
 	
+	/**
+	 * This method removes the user specified entry from a schedule
+	 */
 	@FXML
 	public void removeEntry() {
 		if (entryName1.getText() != null)
 			Schedule.removeEntry(entryName1.getText());
 	}
 	
+	
+	/**
+	 * This method grabs the user's input and then adds the field to the schedule entry
+	 */
 	@FXML
 	public void addField() {
 		Entry entry = Schedule.getEntry(entryName2.getText());
@@ -124,6 +131,10 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 			entry.addField(new Field(fieldName.getText(), fieldValue.getText()));
 	}
 	
+	/**
+	 * This method deletes the user specified field from the schedule entry. This does not delete any other
+	 * fields that may also be on the entry, just the specified one.
+	 */
 	@FXML
 	public void removeField() {
 		Entry entry = Schedule.getEntry(entryName2.getText());
@@ -131,6 +142,10 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 			entry.removeField(fieldName.getText());
 	}
 	
+	/**
+	 * This method adds a schedule file which is what is used to populate the data in the Priority view.
+	 * All schedule files are in csv format
+	 */
 	@FXML
 	public void addSchedule() {
 		if (scheduleFile.getText() != null && scheduleName.getText() != null
@@ -140,6 +155,10 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 		refreshSchedules();
 	}
 	
+	/**
+	 * This method calls on the Schedule and Settings classes in the model to delete a schedule specified
+	 * by the user's input. This completely the deletes the schedules csv file.
+	 */
 	@FXML
 	public void removeSchedule() {
 		Schedule.removeScheduleFile(scheduleName.getText());
@@ -147,6 +166,11 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 		refreshSchedules();
 	}
 	
+	/**
+	 * This method refreshes any changes to the list of schedules on the Settings screen.
+	 * If a schedule is deleted, then it will no longer show off to the side in the view and if one is added, it will be
+	 * shown on the view in a list format.
+	 */
 	private void refreshSchedules() {
 		String temp = "Schedules:\n";
 		for (int i = 0; i < Schedule.getScheduleFiles().size(); i++) {
