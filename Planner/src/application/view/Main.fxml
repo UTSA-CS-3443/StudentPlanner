@@ -31,12 +31,12 @@
                   <Image url="@../../images/settings-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="calendar" disable="true" fitHeight="95.0" fitWidth="81.0" layoutX="93.0" layoutY="668.0" onMouseClicked="#switchToCalendar" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fx:id="calendar" disable="true" fitHeight="95.0" fitWidth="81.0" layoutX="93.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/calendar-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="list" fitHeight="89.0" fitWidth="87.0" layoutX="435.0" layoutY="666.0" onMouseClicked="#switchToList" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fx:id="list" fitHeight="89.0" fitWidth="87.0" layoutX="435.0" layoutY="666.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../images/list-removebg-preview.png" />
                </image>

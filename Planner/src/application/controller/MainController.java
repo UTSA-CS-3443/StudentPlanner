@@ -1,9 +1,3 @@
-/**
- * This class is responsible for allowing the user to switch from the main welcome screen to 
- * one of the two available views. One button will switch the use to the settings view and the other to a view with their added schedule entries
- * 
- * @author Stephanie Bassey, Lucian Williams, Azrah Al Rabeeah
- */
 
 package application.controller;
 
@@ -15,6 +9,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * The MainController class is responsible for allowing the user to switch from the main welcome screen to 
+ * one of the two available views. One button will switch the use to the settings view and the other to a view with their added schedule entries
+ * 
+ * @author Stephanie Bassey, Lucian Williams, Azrah Al Rabeeah
+ */
 public class MainController implements EventHandler<MouseEvent> {
 
 	/**
