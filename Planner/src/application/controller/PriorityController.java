@@ -133,7 +133,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	/**
 	 * Method responsible for switching the view to the Settings view
 	 * 
-	 * @param event (Mouseevent)
+	 * @param event -- MouseEvent listener that listens for mouse clicks on the Settings icon
 	 */
 	@Override
 	public void handle(MouseEvent event) {
@@ -149,7 +149,7 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	/**
 	 * Method responsible for switching view back to the home aka "main" view
 	 * 
-	 * @param event (MouseEvent)
+	 * @param event -- MouseEvent listener that listens for mouse clicks on the home button
 	 */
 	public void switchToHome(MouseEvent event) {
 		try {
@@ -166,16 +166,16 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
 	 * also creates labels and then adds them to different places on the anchor pane.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param topLeftText
-	 * @param topRightText
-	 * @param centerTopText
-	 * @param centerText
-	 * @param centerBottomText
-	 * @param bottomLeftText
-	 * @param bottomRightText
-	 * @return temp (AnchorPane)
+	 * @param x -- specifies the x position for where to place the anchor pane
+	 * @param y -- specifies the y position for where to place the anchor pane
+	 * @param topLeftText -- String to be placed in the top left of the anchor pane
+	 * @param topRightText -- String to be placed in the top right of the anchor pane
+	 * @param centerTopText -- String to be placed in the center top of the anchor pane
+	 * @param centerText -- String to be placed in the center of the anchor pane
+	 * @param centerBottomText -- String to be placed in the center bottom of the anchor pane
+	 * @param bottomLeftText -- String to be placed in the bottom left of the anchor pane
+	 * @param bottomRightText -- String to be placed in the bottom right left of the anchor pane
+	 * @return temp (AnchorPane) -- anchor pane with all of the populated GUI components
 	 */
 	private AnchorPane largeEntry(int x, int y, String topLeftText, String topRightText, String centerTopText,
 			String centerText, String centerBottomText, String bottomLeftText, String bottomRightText) {
@@ -297,16 +297,10 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
 	 * also creates labels and then adds them to different positions on the anchor pane.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param topLeftText
-	 * @param topRightText
-	 * @param centerTopText
-	 * @param centerText
-	 * @param centerBottomText
-	 * @param bottomLeftText
-	 * @param bottomRightText
-	 * @return temp (AnchorPane)
+	 * @param topText -- String to be placed in the top of the anchor pane
+	 * @param centerText -- String to be placed in the center of the anchor pane
+	 * 
+	 * @return temp (AnchorPane w/ all of the populated GUI components)
 	 */
 	private AnchorPane mediumEntry(int x, int y, String topText, String centerText) {
 
@@ -363,16 +357,12 @@ public class PriorityController implements EventHandler<MouseEvent>, Initializab
 	 * the basis for a schedule entry. As each entry is allowed to have several fields (areas of text on it), this method 
 	 * also creates labels and then adds them to different places on the anchor pane.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param topLeftText
-	 * @param topRightText
-	 * @param centerTopText
-	 * @param centerText
-	 * @param centerBottomText
-	 * @param bottomLeftText
-	 * @param bottomRightText
-	 * @return temp (AnchorPane)
+	 * @param x -- specifies x position for anchor pane
+	 * @param y -- specifies y position for anchor pane
+	 * @param topText -- String to be placed in the top of the anchor pane
+	 * @param centerText -- String to be placed in the center of the anchor pane
+	 * 
+	 * @return temp (AnchorPane to be returned w/ all of the populated GUI components)
 	 */
 	private AnchorPane smallEntry(int x, int y, String topText, String centerText) {
 

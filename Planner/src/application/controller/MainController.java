@@ -21,7 +21,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	 * Method that listens for MouseEvents, specifically a mouse click on
 	 * the image representing Settings, and switches the user to that view
 	 * 
-	 * @param event (MouseEvent)
+	 * @param event -- MouseEvent listener for mouse clicks on the Settings image
 	 */
 	@Override
 	public void handle(MouseEvent event) {
@@ -40,7 +40,7 @@ public class MainController implements EventHandler<MouseEvent> {
 	 * Method that listens for MouseEvents, specifically a mouse click on
 	 * the image representing the view with the schedule entries, and then switches the user to that view
 	 * 
-	 * @param event (MouseEvent)
+	 * @param event -- MouseEvent listener for mouse clicks on the Settings image
 	 */
 	public void switchToPriority(MouseEvent event) {
 		try {

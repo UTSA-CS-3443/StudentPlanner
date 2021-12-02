@@ -65,7 +65,7 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	/**
 	 * Method responsible for switching the user back to the main/welcome screen
 	 * 
-	 * @param event (MouseEvent)
+	 * @param event (MouseEvent that listens for mouse clicks on the home button)
 	 */
 	@Override
 	public void handle(MouseEvent event) {
@@ -81,9 +81,9 @@ public class SettingsController implements EventHandler<MouseEvent>, Initializab
 	}
 	
 	/**
-	 * Method responisble for switching the user back to the view with the schedule entries
+	 * Method responsible for switching the user back to the view with the schedule entries
 	 * 
-	 * @param event
+	 * @param event (MouseEvent that listens for mouse clicks on the Priority button)
 	 */
 	public void switchToPriority(MouseEvent event) {
 		try {
